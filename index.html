@@ -1931,20 +1931,24 @@
         <div class="accordion-content mt-[30px] md:mt-[60px]">
           <div class="max-w-6xl w-full mx-auto " x-data="{selected:1}">
             <ul class="shadow-box flex flex-col gap-[22px]">
-              <li class="relative transition duration-300 ease-in-out">
-                <button type="button"
-                  class="w-full pl-[32px] pr-[28px] radial-gradient py-[18px] md:py-[24px] text-left border rounded-[24px] outline-none focus:outline-none transition duration-300 ease-in-out"
-                  :class="selected === 3 ? 'border-white' : 'border-indigo-400'"
-                  @click="selected !== 3 ? selected = 3 : selected = null">
-                  <div class="flex items-center justify-between">
-                    <span class="text-white sm:text-lg md:text-xl lg:text-[26px] font-medium">What does it cost?</span>
-                    <svg :class="{'transform rotate-180' : selected == 3}"
-                      :stroke="selected === 3 ? 'white' : '#6366F1'" class="w-[24px] h-[24px]" fill="none"
-                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
-                      <path d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                  </div>
-                </button>
+              <li class="relative transition duration-300 ease-in-out ">
+                <div class="relative radial-gradient  rounded-[24px]  border-none outline-none focus:outline-none">
+                  <button type="button"
+                    class="w-full pl-[32px] pr-[28px] radial-gradient py-[18px] md:py-[24px] text-left border rounded-[24px] outline-none focus:outline-none transition duration-300 ease-in-out"
+                    :class="selected === 3 ? 'border-white' : 'border-white'"
+                    @click="selected !== 3 ? selected = 3 : selected = null">
+                    <div class="flex items-center justify-between">
+                      <span class="text-white sm:text-lg md:text-xl lg:text-[26px] font-medium">What does it
+                        cost?</span>
+                      <svg :class="{'transform rotate-180' : selected == 3}"
+                        :stroke="selected === 3 ? 'white' : 'white'" class="w-[24px] h-[24px]" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M19 9l-7 7-7-7"></path>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+
                 <div
                   class="relative content-description overflow-hidden transition-all max-h-0 duration-700 ease-in-out mt-[16px] border border-white rounded-2xl opacity-0"
                   x-ref="container3" x-bind:class="selected == 3 ? 'opacity-100 max-h-[500px]' : 'opacity-0 max-h-0'"
@@ -1965,19 +1969,22 @@
               </li>
 
               <li class="relative transition duration-300 ease-in-out">
-                <button type="button"
-                  class="w-full pl-[32px] radial-gradient pr-[28px] py-[18px] md:py-[24px] text-left border rounded-[24px] outline-none focus:outline-none transition duration-300 ease-in-out"
-                  :class="selected === 7 ? 'border-white' : 'border-indigo-400'"
-                  @click="selected !== 7 ? selected = 7 : selected = null">
-                  <div class="flex items-center justify-between"> <span
-                      class="text-white sm:text-lg md:text-xl lg:text-[26px] font-medium">Who’s eligible? </span>
-                    <svg :class="{'transform rotate-180' : selected == 7}"
-                      :stroke="selected === 7 ? 'white' : '#6366F1'" class="w-[24px] h-[24px]" fill="none"
-                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
-                      <path d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                  </div>
-                </button>
+                <div class="relative radial-gradient  rounded-[24px]  border-none outline-none focus:outline-none">
+                  <button type="button"
+                    class="w-full pl-[32px] radial-gradient pr-[28px] py-[18px] md:py-[24px] text-left border rounded-[24px] outline-none focus:outline-none transition duration-300 ease-in-out"
+                    :class="selected === 7 ? 'border-white' : 'white'"
+                    @click="selected !== 7 ? selected = 7 : selected = null">
+                    <div class="flex items-center justify-between"> <span
+                        class="text-white sm:text-lg md:text-xl lg:text-[26px] font-medium">Who’s eligible? </span>
+                      <svg :class="{'transform rotate-180' : selected == 7}"
+                        :stroke="selected === 7 ? 'white' : 'white'" class="w-[24px] h-[24px]" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M19 9l-7 7-7-7"></path>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+
                 <div
                   class="relative content-description overflow-hidden transition-all max-h-0 duration-700 ease-in-out mt-[16px] border border-white rounded-2xl opacity-0"
                   x-ref="container7" x-bind:class="selected == 7 ? 'opacity-100 max-h-[500px]' : 'opacity-0 max-h-0'"
@@ -2002,20 +2009,22 @@
               </li>
 
               <li class="relative transition duration-300 ease-in-out">
-                <button type="button"
-                  class="w-full pl-[32px]  radial-gradient pr-[28px] py-[18px] md:py-[24px] text-left border rounded-[24px] outline-none focus:outline-none transition duration-300 ease-in-out"
-                  :class="selected === 11 ? 'border-white' : 'border-indigo-400'"
-                  @click="selected !== 11 ? selected = 11 : selected = null">
-                  <div class="flex items-center justify-between"> <span
-                      class="text-white sm:text-lg md:text-xl lg:text-[26px] font-medium">How do I apply? </span>
-                    <svg :class="{'transform rotate-180' : selected == 11}"
-                      :stroke="selected === 11 ? 'white' : '#6366F1'" class="w-[24px] h-[24px]" fill="none"
-                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
-                      <path d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                    </svg>
-                  </div>
-                </button>
+                <div class="relative radial-gradient  rounded-[24px]  border-none outline-none focus:outline-none">
+                  <button type="button"
+                    class="w-full pl-[32px]  radial-gradient pr-[28px] py-[18px] md:py-[24px] text-left border rounded-[24px] outline-none focus:outline-none transition duration-300 ease-in-out"
+                    :class="selected === 11 ? 'border-white' : 'border-white'"
+                    @click="selected !== 11 ? selected = 11 : selected = null">
+                    <div class="flex items-center justify-between"> <span
+                        class="text-white sm:text-lg md:text-xl lg:text-[26px] font-medium">How do I apply? </span>
+                      <svg :class="{'transform rotate-180' : selected == 11}"
+                        :stroke="selected === 11 ? 'white' : 'white'" class="w-[24px] h-[24px]" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M19 9l-7 7-7-7"></path>
+                      </svg>
+                      </svg>
+                    </div>
+                  </button>
+                </div>
                 <div
                   class="relative content-description overflow-hidden transition-all max-h-0 duration-700 ease-in-out mt-[16px] border border-white rounded-2xl opacity-0"
                   x-ref="container11" x-bind:class="selected == 11 ? 'opacity-100 max-h-[500px]' : 'opacity-0 max-h-0'"
