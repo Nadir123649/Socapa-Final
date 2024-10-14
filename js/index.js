@@ -144,3 +144,17 @@ toggleDropdowns.forEach(toggle => {
 });
 
 
+  // Open the modal
+  document.getElementById('open-modal').addEventListener('click', function() {
+    document.getElementById('film-modal').classList.remove('hidden');
+  });
+
+  // Close the modal
+  document.getElementById('close-modal').addEventListener('click', function() {
+    document.getElementById('film-modal').classList.add('hidden');
+  });
+
+  // Another close button option
+  document.getElementById('close-modal-2').addEventListener('click', function() {
+    document.getElementById('film-modal').classList.add('hidden');
+  });
